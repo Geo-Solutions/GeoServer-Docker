@@ -10,5 +10,5 @@ RUN mv /tmp/geoserver.war $CATALINA_HOME/webapps/geoserver.war
 RUN mkdir /data && mkdir $GEOSERVER_DATA_DIR
 
 EXPOSE 8080
-VOLUME [$GEOSERVER_DATA_DIR]
+VOLUME [/data/geoserver/]
 CMD ["catalina.sh", "run"]
